@@ -72,33 +72,35 @@ module Hornetseye
     end
 
     def save_magick( file )
-      to_magick.write file
+      Magick::ImageList.new.push( to_magick ).write file
+      self
     end
 
     def save_ubyte( file )
-      to_ubyte.save_magick
+      to_ubyte.save_magick file
     end
 
     def save_usint( file )
-      to_usint.save_magick
+      to_usint.save_magick file
     end
 
     def save_uint( file )
-      to_uint.save_magick
+      to_uint.save_magick file
     end
 
     def save_ubytergb( file )
-      to_ubytergb.save_magick
+      to_ubytergb.save_magick file
     end
 
     def save_usintrgb( file )
-      to_usintrgb.save_magick
+      to_usintrgb.save_magick file
     end
 
     def save_uintrgb( file )
-      to_uintrgb.save_magick
+      to_uintrgb.save_magick file
     end
 
   end
 
 end
+
