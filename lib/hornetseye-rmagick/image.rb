@@ -57,36 +57,36 @@ module Magick
         columns, rows
     end
 
-      def to_multiarray
-        case image_type
-        when BilevelType, GrayscaleType, GrayscaleMatteType
-          case depth
-          when 32
-            to_type UINT
-          when 16
-            to_type USINT
-          when 1, 8
-            to_type UBYTE
-          else
-            Kernel.raise "Conversion for grayscale image with depth #{depth} not " +
-              "implemented"
-          end
-        when PaletteType, PaletteMatteType, TrueColorType, TrueColorMatteType
-          case depth
-          when 32
-            to_type UINTRGB
-          when 16
-            to_type USINTRGB
-          when 8
-            to_type UBYTERGB
-          else
-            Kernel.raise "Conversion for colour image with depth #{depth} not " +
-              "implemented"
-          end
+    def to_multiarray
+      case image_type
+      when BilevelType, GrayscaleType, GrayscaleMatteType
+        case depth
+        when 32
+          to_type UINT
+        when 16
+          to_type USINT
+        when 1, 8
+          to_type UBYTE
         else
-          Kernel.raise "Unknown image type #{image_type.inspect}"
+          Kernel.raise "Conversion for grayscale image with depth #{depth} not " +
+            "implemented"
         end
+      when PaletteType, PaletteMatteType, TrueColorType, TrueColorMatteType
+        case depth
+        when 32
+          to_type UINTRGB
+        when 16
+          to_type USINTRGB
+        when 8
+          to_type UBYTERGB
+        else
+          Kernel.raise "Conversion for colour image with depth #{depth} not " +
+            "implemented"
+        end
+      else
+        Kernel.raise "Unknown image type #{image_type.inspect}"
       end
+    end
 
   end
 

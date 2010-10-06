@@ -18,5 +18,6 @@ require 'RMagick'
 require 'malloc'
 require 'multiarray'
 require 'hornetseye_frame'
+require 'hornetseye-rmagick/node'
 require 'hornetseye-rmagick/image'
 
