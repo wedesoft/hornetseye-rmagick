@@ -71,6 +71,34 @@ module Hornetseye
       retval
     end
 
+    def save_magick( file )
+      to_magick.write file
+    end
+
+    def save_ubyte( file )
+      to_ubyte.save_magick
+    end
+
+    def save_usint( file )
+      to_usint.save_magick
+    end
+
+    def save_uint( file )
+      to_uint.save_magick
+    end
+
+    def save_ubytergb( file )
+      to_ubytergb.save_magick
+    end
+
+    def save_usintrgb( file )
+      to_usintrgb.save_magick
+    end
+
+    def save_uintrgb( file )
+      to_uintrgb.save_magick
+    end
+
   end
 
 end
