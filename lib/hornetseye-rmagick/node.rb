@@ -66,8 +66,9 @@ module Hornetseye
         raise "Conversion from #{typecode} to Magick::Image not implemented"
       end
       retval = Magick::Image.new( *shape ) { self.depth = depth if depth }
-      str = memory.read memory.size
-      retval.import_pixels 0, 0, shape[0], shape[1], colourspace, str, pixel_type
+      data = memorise.memory
+      retval.import_pixels 0, 0, shape[0], shape[1], colourspace,
+                           memory.read( memory.size ), pixel_type
       retval
     end
 
