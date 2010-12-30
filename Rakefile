@@ -6,7 +6,7 @@ require 'rake/packagetask'
 require 'rbconfig'
 
 PKG_NAME = 'hornetseye-rmagick'
-PKG_VERSION = '0.3.0'
+PKG_VERSION = '0.3.1'
 RB_FILES = FileList[ 'lib/**/*.rb' ]
 TC_FILES = FileList[ 'test/tc_*.rb' ]
 TS_FILES = FileList[ 'test/ts_*.rb' ]
@@ -89,7 +89,7 @@ begin
     s.extra_rdoc_files = []
     s.rdoc_options = %w{--no-private}
     s.add_dependency %q<rmagick>, [ '~> 2.0' ]
-    s.add_dependency %q<malloc>, [ '~> 1.1' ]
+    s.add_dependency %q<malloc>, [ '~> 1.4' ]
     s.add_dependency %q<multiarray>, [ '~> 0.15' ]
     s.add_development_dependency %q{rake}
   end
@@ -112,7 +112,7 @@ begin
     s.extra_rdoc_files = []
     s.rdoc_options = %w{--no-private}
     s.add_dependency %q<rmagick>, [ '~> 2.0' ]
-    s.add_dependency %q<malloc>, [ '~> 1.1' ]
+    s.add_dependency %q<malloc>, [ '~> 1.4' ]
     s.add_dependency %q<multiarray>, [ '~> 0.15' ]
   end
   GEM_BINARY = "#{PKG_NAME}-#{PKG_VERSION}-#{$BINSPEC.platform}.gem"
