@@ -6,7 +6,7 @@ require 'rake/packagetask'
 require 'rbconfig'
 
 PKG_NAME = 'hornetseye-rmagick'
-PKG_VERSION = '0.3.1'
+PKG_VERSION = '0.4.0'
 RB_FILES = FileList[ 'lib/**/*.rb' ]
 TC_FILES = FileList[ 'test/tc_*.rb' ]
 TS_FILES = FileList[ 'test/ts_*.rb' ]

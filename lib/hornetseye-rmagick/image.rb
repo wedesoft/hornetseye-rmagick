@@ -90,5 +90,7 @@ module Magick
 
   end
 
+  Image.class_eval { include Hornetseye::MultiArrayConversion }
+
 end
 
