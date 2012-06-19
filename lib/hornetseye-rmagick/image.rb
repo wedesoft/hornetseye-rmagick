@@ -62,11 +62,11 @@ module Magick
       when BilevelType, GrayscaleType, GrayscaleMatteType
         case depth
         when 32
-          to_type UINT
+          to_type Hornetseye::UINT
         when 16
-          to_type USINT
+          to_type Hornetseye::USINT
         when 1, 8
-          to_type UBYTE
+          to_type Hornetseye::UBYTE
         else
           Kernel.raise "Conversion for grayscale image with depth #{depth} not " +
             "implemented"
@@ -74,11 +74,11 @@ module Magick
       when PaletteType, PaletteMatteType, TrueColorType, TrueColorMatteType
         case depth
         when 32
-          to_type UINTRGB
+          to_type Hornetseye::UINTRGB
         when 16
-          to_type USINTRGB
+          to_type Hornetseye::USINTRGB
         when 8
-          to_type UBYTERGB
+          to_type Hornetseye::UBYTERGB
         else
           Kernel.raise "Conversion for colour image with depth #{depth} not " +
             "implemented"
