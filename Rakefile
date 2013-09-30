@@ -6,7 +6,7 @@ require 'rake/packagetask'
 require 'rbconfig'
 
 PKG_NAME = 'hornetseye-rmagick'
-PKG_VERSION = '1.0.2'
+PKG_VERSION = '1.0.3'
 RB_FILES = FileList[ 'lib/**/*.rb' ]
 TC_FILES = FileList[ 'test/tc_*.rb' ]
 TS_FILES = FileList[ 'test/ts_*.rb' ]
@@ -16,6 +16,7 @@ BIN_FILES = [ 'README.md', 'COPYING', '.document' ] +
             RB_FILES + TS_FILES + TC_FILES
 SUMMARY = %q{RMagick integration for Hornetseye}
 DESCRIPTION = %q{This Ruby extension implements the necessary conversions to save and load images stored in Hornetseye::MultiArray.}
+LICENSE = 'GPL-3+'
 AUTHOR = %q{Jan Wedekind}
 EMAIL = %q{jan@wedesoft.de}
 HOMEPAGE = %q{http://wedesoft.github.com/hornetseye-rmagick/}
@@ -76,6 +77,7 @@ begin
     s.date = Date.today.to_s
     s.summary = SUMMARY
     s.description = DESCRIPTION
+    s.license = LICENSE
     s.author = AUTHOR
     s.email = EMAIL
     s.homepage = HOMEPAGE
@@ -100,6 +102,7 @@ begin
     s.date = Date.today.to_s
     s.summary = SUMMARY
     s.description = DESCRIPTION
+    s.license = LICENSE
     s.author = AUTHOR
     s.email = EMAIL
     s.homepage = HOMEPAGE
