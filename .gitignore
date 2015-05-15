@@ -3,4 +3,4 @@ pkg
 .yardoc
 *.gem
 *.swp
-
+.*.un~
