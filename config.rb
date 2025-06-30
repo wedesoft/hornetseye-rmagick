@@ -1,7 +1,7 @@
 require 'rake'
 
 PKG_NAME = 'hornetseye-rmagick'
-PKG_VERSION = '1.0.5'
+PKG_VERSION = '1.0.6'
 RB_FILES = ['config.rb'] + FileList[ 'lib/**/*.rb' ]
 TC_FILES = FileList[ 'test/tc_*.rb' ]
 TS_FILES = FileList[ 'test/ts_*.rb' ]
